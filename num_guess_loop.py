@@ -5,10 +5,10 @@
 # if user guess is incorrect it will ask user to guess again until user guess the correct number
 # by using while true loop.
 
+import random
+
 
 def main():
-
-    import random
 
     correct_guess = random.randint(0, 9)
 
@@ -23,14 +23,14 @@ def main():
                     print("You guessed the correct number!")
                     break
                 else:
-                    print("Incorrect guess, try again.")
+                    print("Incorrect guess, please try again.")
             else:
-                print("{}, is not a valid number.".format(user_guess_as_int))
+                print("{}, is not a between 0 and 9.".format(user_guess_as_int))
 
         except ValueError:
             print("{}, is not a valid number.".format(user_guess_as_str))
-        finally:
-            print("Thank you for playing!")
+
+    print("Thank you for playing!")
 
 
 if __name__ == "__main__":
